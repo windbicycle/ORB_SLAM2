@@ -99,6 +99,7 @@ protected:
     bool mbFinished;
     std::mutex mMutexFinish;
 
+    //TODO
     Map* mpMap;
 
     LoopClosing* mpLoopCloser;

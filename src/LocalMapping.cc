@@ -318,6 +318,7 @@ void LocalMapping::CreateNewMapPoints()
             cv::Mat x3D;
             if(cosParallaxRays<cosParallaxStereo && cosParallaxRays>0 && (bStereo1 || bStereo2 || cosParallaxRays<0.9998))
             {
+                //TODO
                 // Linear Triangulation Method
                 cv::Mat A(4,4,CV_32F);
                 A.row(0) = xn1.at<float>(0)*Tcw1.row(2)-Tcw1.row(0);
@@ -411,7 +412,7 @@ void LocalMapping::CreateNewMapPoints()
                 if((errX2*errX2+errY2*errY2+errX2_r*errX2_r)>7.8*sigmaSquare2)
                     continue;
             }
-
+            //TODO
             //Check scale consistency
             cv::Mat normal1 = x3D-Ow1;
             float dist1 = cv::norm(normal1);

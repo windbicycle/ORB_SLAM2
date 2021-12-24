@@ -288,6 +288,7 @@ MapPoint* KeyFrame::GetMapPoint(const size_t &idx)
 
 void KeyFrame::UpdateConnections()
 {
+    //TODO
     map<KeyFrame*,int> KFcounter;
 
     vector<MapPoint*> vpMP;

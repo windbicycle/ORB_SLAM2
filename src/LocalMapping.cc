@@ -412,7 +412,6 @@ void LocalMapping::CreateNewMapPoints()
                 if((errX2*errX2+errY2*errY2+errX2_r*errX2_r)>7.8*sigmaSquare2)
                     continue;
             }
-            //TODO
             //Check scale consistency
             cv::Mat normal1 = x3D-Ow1;
             float dist1 = cv::norm(normal1);
@@ -425,7 +424,7 @@ void LocalMapping::CreateNewMapPoints()
 
             const float ratioDist = dist2/dist1;
             const float ratioOctave = mpCurrentKeyFrame->mvScaleFactors[kp1.octave]/pKF2->mvScaleFactors[kp2.octave];
-
+            //TODO
             /*if(fabs(ratioDist-ratioOctave)>ratioFactor)
                 continue;*/
             if(ratioDist*ratioFactor<ratioOctave || ratioDist>ratioOctave*ratioFactor)

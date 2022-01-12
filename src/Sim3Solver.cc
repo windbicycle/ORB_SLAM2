@@ -176,6 +176,7 @@ cv::Mat Sim3Solver::iterate(int nIterations, bool &bNoMore, vector<bool> &vbInli
             vAvailableIndices.pop_back();
         }
 
+        //TODO
         ComputeSim3(P3Dc1i,P3Dc2i);
 
         CheckInliers();
